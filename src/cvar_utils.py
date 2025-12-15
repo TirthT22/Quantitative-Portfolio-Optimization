@@ -139,8 +139,8 @@ def generate_cvar_data(returns_dict: dict, scenario_generation_settings: dict):
 
     return_mean = returns_dict["mean"]
     returns_data = returns_dict["returns"].to_numpy()
-    num_scen = scenario_generation_settings["num_scen"]
-    fit_type = scenario_generation_settings["fit_type"]
+    num_scen = scenario_generation_settings.get("num_scen")
+    fit_type = scenario_generation_settings.get("fit_type")
     verbose = scenario_generation_settings.get("verbose") 
 
     if "kde_settings" in scenario_generation_settings:
